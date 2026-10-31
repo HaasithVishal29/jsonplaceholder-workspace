@@ -1,0 +1,130 @@
+newman
+
+Variable collection
+
+→ New Request
+  GET /posts/5 [errored]
+     Invalid URI "http:///posts/5"
+  2. Status code is 200
+  3. Status code is 200
+  4. Successful response
+  5. Response contains userId
+  6. ID is 1
+  7. User ID is 1
+  8. Title exists
+  9. Title is string
+ 10. Response time below 100ms
+  ┌
+  │ undefined
+  │ undefined
+  │ '[Function: json]'
+  └
+ 11. Content-Type exists
+ 12. Content-Type is JSON
+
+→ Dynamic variable
+  POST /posts [errored]
+     Invalid URI "http:///posts"
+
+→ New Request
+  GET /posts [errored]
+     Invalid URI "http:///posts"
+
+→ New Request
+  GET /users/5 [errored]
+     Invalid URI "http:///users/5"
+
+┌─────────────────────────┬──────────┬──────────┐
+│                         │ executed │   failed │
+├─────────────────────────┼──────────┼──────────┤
+│              iterations │        1 │        0 │
+├─────────────────────────┼──────────┼──────────┤
+│                requests │        4 │        4 │
+├─────────────────────────┼──────────┼──────────┤
+│            test-scripts │        1 │        0 │
+├─────────────────────────┼──────────┼──────────┤
+│      prerequest-scripts │        1 │        0 │
+├─────────────────────────┼──────────┼──────────┤
+│              assertions │       11 │       11 │
+├─────────────────────────┴──────────┴──────────┤
+│ total run duration: 345ms                     │
+├───────────────────────────────────────────────┤
+│ total data received: 0B (approx)              │
+└───────────────────────────────────────────────┘
+
+[31m   # [39m[31m failure        [39m[31m detail                                                                                                                                                                             [39m
+[90m     [39m[90m                [39m[90m                                                                                                                                                                                    [39m
+ 01.  Error                                                                                                                                                                                              
+                      Invalid URI "http:///posts/5"                                                                                                                                                      
+                      at request                                                                                                                                                                         
+                      inside ""                                                                                                                                                                          
+[90m     [39m[90m                [39m[90m                                                                                                                                                                                    [39m
+ 02.  AssertionError  Status code is 200                                                                                                                                                                 
+                      expected PostmanResponse{ …(5) } to have property 'code'                                                                                                                           
+                      at assertion:0 in test-script                                                                                                                                                      
+                      inside "New Request"                                                                                                                                                               
+[90m     [39m[90m                [39m[90m                                                                                                                                                                                    [39m
+ 03.  AssertionError  Status code is 200                                                                                                                                                                 
+                      expected undefined to deeply equal 200                                                                                                                                             
+                      at assertion:1 in test-script                                                                                                                                                      
+                      inside "New Request"                                                                                                                                                               
+[90m     [39m[90m                [39m[90m                                                                                                                                                                                    [39m
+ 04.  AssertionError  Successful response                                                                                                                                                                
+                      expected undefined to be one of [ 200, 201, 204 ]                                                                                                                                  
+                      at assertion:2 in test-script                                                                                                                                                      
+                      inside "New Request"                                                                                                                                                               
+[90m     [39m[90m                [39m[90m                                                                                                                                                                                    [39m
+ 05.  AssertionError  Response contains userId                                                                                                                                                           
+                      the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string 
+                      at assertion:3 in test-script                                                                                                                                                      
+                      inside "New Request"                                                                                                                                                               
+[90m     [39m[90m                [39m[90m                                                                                                                                                                                    [39m
+ 06.  JSONError       ID is 1                                                                                                                                                                            
+                      "undefined" is not valid JSON                                                                                                                                                      
+                      at assertion:4 in test-script                                                                                                                                                      
+                      inside "New Request"                                                                                                                                                               
+[90m     [39m[90m                [39m[90m                                                                                                                                                                                    [39m
+ 07.  JSONError       User ID is 1                                                                                                                                                                       
+                      "undefined" is not valid JSON                                                                                                                                                      
+                      at assertion:5 in test-script                                                                                                                                                      
+                      inside "New Request"                                                                                                                                                               
+[90m     [39m[90m                [39m[90m                                                                                                                                                                                    [39m
+ 08.  JSONError       Title exists                                                                                                                                                                       
+                      "undefined" is not valid JSON                                                                                                                                                      
+                      at assertion:6 in test-script                                                                                                                                                      
+                      inside "New Request"                                                                                                                                                               
+[90m     [39m[90m                [39m[90m                                                                                                                                                                                    [39m
+ 09.  JSONError       Title is string                                                                                                                                                                    
+                      "undefined" is not valid JSON                                                                                                                                                      
+                      at assertion:7 in test-script                                                                                                                                                      
+                      inside "New Request"                                                                                                                                                               
+[90m     [39m[90m                [39m[90m                                                                                                                                                                                    [39m
+ 10.  AssertionError  Response time below 100ms                                                                                                                                                          
+                      expected undefined to be a number or a date                                                                                                                                        
+                      at assertion:8 in test-script                                                                                                                                                      
+                      inside "New Request"                                                                                                                                                               
+[90m     [39m[90m                [39m[90m                                                                                                                                                                                    [39m
+ 11.  AssertionError  Content-Type exists                                                                                                                                                                
+                      expected false to be true                                                                                                                                                          
+                      at assertion:9 in test-script                                                                                                                                                      
+                      inside "New Request"                                                                                                                                                               
+[90m     [39m[90m                [39m[90m                                                                                                                                                                                    [39m
+ 12.  AssertionError  Content-Type is JSON                                                                                                                                                               
+                      the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string 
+                      at assertion:10 in test-script                                                                                                                                                     
+                      inside "New Request"                                                                                                                                                               
+[90m     [39m[90m                [39m[90m                                                                                                                                                                                    [39m
+ 13.  Error                                                                                                                                                                                              
+                      Invalid URI "http:///posts"                                                                                                                                                        
+                      at request                                                                                                                                                                         
+                      inside ""                                                                                                                                                                          
+[90m     [39m[90m                [39m[90m                                                                                                                                                                                    [39m
+ 14.  Error                                                                                                                                                                                              
+                      Invalid URI "http:///posts"                                                                                                                                                        
+                      at request                                                                                                                                                                         
+                      inside ""                                                                                                                                                                          
+[90m     [39m[90m                [39m[90m                                                                                                                                                                                    [39m
+ 15.  Error                                                                                                                                                                                              
+                      Invalid URI "http:///users/5"                                                                                                                                                      
+                      at request                                                                                                                                                                         
+                      inside ""                                                                                                                                                                          
